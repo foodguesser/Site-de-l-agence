@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#titre-principal{
+    font-size: 50px;
+}
+
+.titre-secondaire{
+    font-weight: normal;
+}
+
+.texte{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+body{
+    height: 1000px;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav .openMenu{
+    color: black;
+    display: none;
+    font-size: 1.3rem;
+    margin: 20px;
+    cursor: pointer;
+}
+  
+nav .closeMenu{
+    color: black;
+    display: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+  
+nav .closeMenu:hover{
+    transform: scale(1.2);
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 100%;
+    margin: 40px;
+}
+
+nav{
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    gap: 10px;
+    margin: 40px;
+}
+
+nav li a{
+    padding-right: 8px;
+    border-right: 1px solid black;
+    position: relative;
+    font-size: 18px;
+}
+
+nav li:nth-last-child(1) a, nav li:nth-last-child(2) a{
+    border-right: none;
+    padding-right: 0;
+}
+
+
+
+nav ul a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    margin: 0 auto;
+    left: 0;
+    bottom: -6px;
+    background: #3078a5;
+}
+
+nav ul a:hover{
+    color: #3078a5;
+}
+
+nav ul a:hover::after{
+    width: 90%;
+    transition: 0.4s;
+}
+
+main{
+    padding-top: 60px;
+    background: url(main.jpg) no-repeat 50% 50% fixed;
+    background-size: cover;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s;
+}
+
+main:hover{
+    opacity: 0.7;
+}
+
+main h1{
+    color: white;
+    font-size: 40px;
+}
+
+.presentation{
+    height: 400px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.presentation .gauche{
+    width: 30%;
+}
+
+.presentation h1{
+    margin-bottom: 10px;
+}
+
+.presentation-img{
+    margin-left: -300px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: linear-gradient(to bottom, rgba(255,128,255,0.5), rgba(0,0,128,0.5));
+}
+
+.projets{
+    background-color: #ffba00;
+    height: 400px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.projets-logo{
+    margin-right: -300px;
+    width: 300px;
+    height: 300px;
+    background: url('img/Logo-FoodGuesser.png') 50% 50%;
+}
+
+.projets .droite{
+    width: 30%;
+    position: relative;
+}
+
+.projets .droite p{
+    margin-bottom: 10px;
+}
+
+.projets .droite h1{
+    margin-bottom: 10px;
+}
+
+.projets .droite .projets-btn{
+    position: absolute;
+    left: 0;
+    border: 1px dashed black;
+    padding: 5px 2px;
+    font-size: 20px;
+    text-align: center;
+    width: 60%;
+    font-weight: 300;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.projets .droite .projets-btn i{
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+.projets .droite .projets-btn:hover{
+    background-color: black;
+}
+
+.projets .droite .projets-btn:hover a{
+    color: #ffba00;    
+}
+
+
+.equipe{
+    height: 600px;
+}
+
+.equipe-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px auto 0;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.equipe h1{
+    text-align: center;
+    margin: 50px auto;
+}
+
+.equipe-personnes-description{
+    width: 360px;
+    margin: 10px;
+    display: flex;
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.equipe-personnes-description .nom{
+    font-weight: bold;
+}
+
+.photo{
+    width: 130px;
+    height: 130px;
+    background-color: black;
+    border-radius: 100%;
+    margin-bottom: 15px;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3078a5;
+    height: 200px;
+}
+
+.top-footer{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reseaux ul{
+    display: flex;
+    gap: 15px;
+}
+
+.reseaux li a{
+    color: white;
+    background-color: #3078a5;
+    padding: 10px;
+    border-radius: 100%;
+    border: 1px solid white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.reseaux a:hover{
+    background-color: white;
+    color: #3078a5;
+}
+
+.footer p{
+    text-align: center;
+    margin: 10px 20px;
+    color: white;
+}
+
+.footer a{
+    color: white;
+}
+
+.footer a:hover{
+    color: #ffba00;
+}
+
+@media screen and (max-width: 1425px){
+    .equipe{
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    nav{
+        height: 90px;
+        box-shadow: 0px 8px 13px -7px #000000;
+        justify-content: space-between;
+    }
+
+    nav ul{
+        margin: 0;
+        height: 90px;
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        gap: 0px;
+        top: -100%;
+        right: 0;
+        left: 0;
+        transition: all 0.4s;
+        z-index: 100;
+    }
+
+    nav ul a::after{
+        height: 0;
+    }
+    
+    nav ul a:hover{
+        color: white;
+    }
+
+    nav ul li a{
+        border-right: none;
+    }
+
+    nav .closeMenu{
+        display: block;
+        position: absolute;
+        top:25px;
+        right:20px;
+    }
+    
+      nav .openMenu{
+          display: block;        
+    }
+
+    .presentation{
+        flex-direction: column;
+        height: 600px;
+        padding: 50px 10px;
+    }
+
+    .presentation-img{
+        margin-left: 0px;
+        width: 80%;
+        height: 300px;
+    }
+
+    .presentation .gauche{
+        width: 80%;
+        order: 1;
+    }
+
+    .presentation .gauche .titre-secondaire{
+        margin: 25px 0;
+    }
+
+    .presentation .gauche .texte{
+        font-size: 20px;
+    }
+
+    .projets{
+        flex-direction: column;
+        height: 600px;
+        padding: 50px 10px;
+    }
+
+    .projets-logo{
+        margin-right: 0px;
+        width: 40%;
+        height: 300px;
+    }
+
+    .projets .droite{
+        width: 80%;
+        order: 1;
+    }
+
+    .titre-secondaire{
+        margin: 25px 0;
+    }
+
+    .texte{
+        font-size: 20px;
+    }
+
+    .projets .droite .projets-btn{
+        font-size: 18px;
+        width: 40%;
+        left: 50%;
+        transform: translateX(-50%); /* décalage de 50% de sa propre taille */
+    }
+}
+
+
+@media screen and (max-width: 950px){
+    .equipe{
+        height: 1400px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    main{
+        display: none;
+    }
+
+    .presentation{
+        height: 600px;
+    }
+
+    .presentation-img{
+        width: 190px;
+        height: 190px;
+    }
+
+    .projets{
+        height: 600px;
+    }
+
+    .projets-logo{
+        width: 190px;
+        height: 190px;
+    }
+
+    .projets .droite .projets-btn{
+        font-size: 18px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%); /* décalage de 50% de sa propre taille */
+    }
+
+    .top-footer{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 475px){
+    .presentation{
+        height: 700px;
+    }
+
+    .projets{
+        height: 700px;
+    }
+
+}
+
+@media screen and (max-width: 345px){
+    .presentation-img{
+        width: 135px;
+        height: 135px;
+    }
+    
+    .projets-logo{
+        width: 135px;
+        height: 135px;
+    }
+
+}
